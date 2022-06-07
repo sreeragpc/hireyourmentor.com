@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include,re_path
 from django.conf.urls.static import static
+from . import settings
 
 from django.views.static import serve
 from settings import MEDIA_URL,MEDIA_ROOT
