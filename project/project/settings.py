@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from decouple import config
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -18,12 +19,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
     'secondadmin',
     'user',
     'mentor',
     'category',
     'booking',
-    'slots'
+    'slots',
 ]
 
 MIDDLEWARE = [
@@ -81,6 +83,9 @@ DATABASES = {
     }
 
 }
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 
 AUTH_PASSWORD_VALIDATORS = [
