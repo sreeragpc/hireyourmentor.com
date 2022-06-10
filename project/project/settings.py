@@ -126,7 +126,8 @@ STATIC_HOST = config('DJANGO_STATIC_HOST', '')
 STATIC_URL = STATIC_HOST + '/static/'
 
 
-MEDIA_URL = '/media/'
+# MEDIA_URL = '/media/'
+MEDIA_URL = f'https://media-hireyourmentor.s3.amazonaws.com/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
