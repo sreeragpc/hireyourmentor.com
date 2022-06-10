@@ -127,7 +127,7 @@ STATIC_URL = STATIC_HOST + '/static/'
 
 
 # MEDIA_URL = '/media/'
-MEDIA_URL = f'https://media-hireyourmentor.s3.us-west-2.amazonaws.com/media/'
+MEDIA_URL = f'https://media-hireyourmentor.s3.us-west-2.amazonaws.com/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
