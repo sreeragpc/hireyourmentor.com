@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load thumbnail %}
 {% block content %}
 <style>
   body {
@@ -50,10 +49,10 @@
       <div class="row">  
 {% for z in mentor %}   
  {% if z.is_verified  and z.is_available%}
-<div class="card col-md-3 border mt-3 mb-3 text-center  "  style="border-radius: 1rem;">
+<div class="card col-md-3 border mt-3 mb-3 text-center h-100 "  style="border-radius: 1rem;">
   <a href="{% url "mentordetails" z.id %}">
   <div class="bg-image ms-1 mt-1 " >
-    <img class="img-fluid" src="{{ thumbnail z.mentor_image.url  50x50 crop}}"  alt="home" border="0">
+    <img class="img-fluid" src="{{ z.mentor_image.url }}"  alt="home" border="0">
     <a >
       <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
     </a>

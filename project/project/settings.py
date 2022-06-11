@@ -26,7 +26,6 @@ INSTALLED_APPS = [
     'category',
     'booking',
     'slots',
-    'easy_thumbnails',
 
 ]
 
