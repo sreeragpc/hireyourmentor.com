@@ -19,7 +19,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'easy_thumbnails',
     'storages',
     'secondadmin',
     'user',
@@ -27,6 +26,7 @@ INSTALLED_APPS = [
     'category',
     'booking',
     'slots',
+    'easy_thumbnails',
 
 ]
 
