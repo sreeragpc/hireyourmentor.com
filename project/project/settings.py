@@ -115,38 +115,25 @@ USE_I18N = True
 
 USE_TZ = True
 
-# STATIC_URL = '/static/'
 
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME') 
 AWS_S3_FILE_OVERWRITE = config('AWS_S3_FILE_OVERWRITE')
-# AWS_DEFAULT_ACL = config('AWS_DEFAULT_ACL')
 AWS_DEFAULT_ACL = 'public'
-# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
-# s3 static settings
+
 STATIC_LOCATION = 'static'
 STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
 STATICFILES_STORAGE = 'project.storage_backends.StaticStorage'
-# s3 media settings
 PUBLIC_MEDIA_LOCATION = 'mentors'
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{PUBLIC_MEDIA_LOCATION}/'
 DEFAULT_FILE_STORAGE = 'project.storage_backends.PublicMediaStorage'
 
-
-
-
 STATICFILES_DIRS =[os.path.join(BASE_DIR, 'static')] 
 STATIC_ROOT = os.path.join(BASE_DIR ,'staticfiles')
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
-
-# STATIC_HOST = config('DJANGO_STATIC_HOST', '')
-# STATIC_URL = STATIC_HOST + '/static/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 TWILIO_ACCOUNT_SID = config('TWILIO_ACCOUNT_SID')
