@@ -20,7 +20,7 @@ class Mentor(models.Model):
     Qual= models.ForeignKey(Qualification,on_delete = models.CASCADE,null=True, blank=True,)
     Dom= models.ForeignKey(Domains,on_delete = models.CASCADE,null=True, blank=True,)
     mentoruser=models.ForeignKey(User,on_delete=models.CASCADE,null=True, blank=True,)
-    mentor_image = models.ImageField(null=True, blank=True, upload_to='mentors')
+    mentor_image = models.ImageField(null=True, blank=True, upload_to='')
 
 
 
